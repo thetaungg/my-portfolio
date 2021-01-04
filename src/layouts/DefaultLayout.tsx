@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import HeaderComponent from "../components/Header/Header.component";
-import "../css/global.css";
+import NavBar from "../components/NavBar/NavBar.component";
+import "../assets/css/global.css";
 import SEO from "../components/seo";
 
 const DefaultLayout = ({ title = "Hi, I'm Thet Aung", children }: LayoutProps) => {
@@ -18,13 +18,13 @@ const DefaultLayout = ({ title = "Hi, I'm Thet Aung", children }: LayoutProps) =
   return (
     <>
       <SEO title={title} />
-      <HeaderComponent siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `1.5rem 0`,
+          maxWidth: `160rem`,
+          margin: "0 auto",
         }}>
+        <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
         <footer
           style={{

@@ -1,14 +1,15 @@
 import React from "react";
-import Image from "../components/image";
 import DefaultLayout from "../layouts/DefaultLayout";
+import Header from "../components/Header/Header.component";
+import About from "../components/About/About.component";
+import MyProjects from "../components/MyProjects/MyProjects.component";
 
 const IndexPage = () => (
   <DefaultLayout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div>
+      <Header />
+      <About />
+      <MyProjects />
     </div>
   </DefaultLayout>
 );
