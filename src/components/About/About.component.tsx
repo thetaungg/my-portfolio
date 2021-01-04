@@ -10,9 +10,9 @@ const About = () => (
     <div css={styles.textContainer}>
       <h5 css={styles.sectionHeading}>About me</h5>
       <p css={styles.about}>
-        I started learning programming even before I have a computer. I started learning Java in
-        2017. I started learning Web Development in 2019. Six months later, I got my first job as
-        Mid-level Frontend Developer. I'm currently leading the Frontend part of my team.
+        I started learning programming when I was 16. I started out as a Java developer(software).
+        But I switched to Web Developer in 2019 and started learning Javascript. Six months later, I
+        got a Frontend Developer position in a startup company. Now, I'm leading the Frontend.
       </p>
     </div>
   </div>

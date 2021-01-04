@@ -12,7 +12,7 @@ const MyProjects = () => {
           <ProjectItem url="https://api.github.com/repos/zero-to-mastery/CSS_Grid_LearnGame" />
           <ProjectItem url="https://api.github.com/repos/thetaungg/crown-clothings" />
           <ProjectItem url="https://api.github.com/repos/thetaungg/natours" />
-          <ProjectItem url="https://api.github.com/repos/zero-to-mastery/ZtM-Job-Board" />
+          <ProjectItem url="https://api.github.com/repos/thetaungg/my-portfolio" />
           <ProjectItem url="https://api.github.com/repos/thetaungg/media-converter" />
         </div>
       </div>
