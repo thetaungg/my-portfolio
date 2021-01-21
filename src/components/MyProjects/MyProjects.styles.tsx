@@ -4,12 +4,12 @@ export const container = css`
   width: 100%;
   padding: 5rem 0 4rem;
   min-height: calc(100vh - 20rem);
+  background-color: #fafafa;
 `;
 export const card = css`
   display: flex;
   flex-direction: column;
   padding: 5rem;
-  background-color: #fafafa;
   border-radius: 0.8rem;
 `;
 

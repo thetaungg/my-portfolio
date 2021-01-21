@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import * as styles from "./NavBar.styles";
 import ManSvg from "../../assets/images/man.svg";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { element } from "prop-types";
 
 const NavBar = ({ siteTitle = "" }: HeaderProps) => {
   const [isFloating, setIsFloating] = useState<boolean>(false);
@@ -49,7 +48,7 @@ const NavBar = ({ siteTitle = "" }: HeaderProps) => {
           <li css={styles.navItem} onClick={() => onNavClick("projects")}>
             Projects
           </li>
-          <li css={styles.navItem} onClick={() => onNavClick("about")}>
+          <li css={styles.navItem} onClick={() => onNavClick("contact")}>
             Contact me
           </li>
         </ul>

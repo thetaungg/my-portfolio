@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 export const header = css`
   display: flex;
   width: 100%;
-  padding: 2rem 5rem 5rem;
+  padding: 0 5rem 5rem;
   min-height: calc(100vh - 20rem);
   margin-top: 10rem;
 `;
@@ -13,6 +13,7 @@ export const textContainer = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 4rem;
 `;
 
 export const imgContainer = css`
