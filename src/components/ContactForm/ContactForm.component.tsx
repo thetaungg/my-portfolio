@@ -35,7 +35,7 @@ const ContactForm = () => {
     e.preventDefault();
     const data = { name, email, message };
 
-    fetch("https://hooks.zapier.com/hooks/catch/9345672/o0vfexw", {
+    fetch(process.env.GATSBY_WEBHOOK_URL as string, {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(data),
