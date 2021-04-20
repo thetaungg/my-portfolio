@@ -11,6 +11,11 @@ export const container = css`
 export const imgContainer = css`
   min-width: 50%;
   flex-grow: 1;
+  padding-right: 5rem;
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const textContainer = css`

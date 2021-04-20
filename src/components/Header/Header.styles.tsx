@@ -6,6 +6,7 @@ export const header = css`
   padding: 0 5rem 5rem;
   min-height: calc(100vh - 20rem);
   margin-top: 10rem;
+  position: relative;
 `;
 
 export const textContainer = css`
@@ -18,6 +19,10 @@ export const textContainer = css`
 
 export const imgContainer = css`
   flex-basis: 50%;
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const heading = css`
@@ -38,4 +43,15 @@ export const introduction = css`
   ${subHeading};
   margin-bottom: 2rem;
   margin-left: 0;
+`;
+
+export const wave = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  img {
+    width: 100%;
+  }
 `;

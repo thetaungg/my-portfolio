@@ -20,7 +20,7 @@ export const navbar = (isFloating: boolean) => css`
 export const wrapper = css`
   margin: 0 auto;
   padding: 2.5rem 5rem;
-  max-width: 160rem;
+  max-width: var(--max-width);
   display: flex;
   align-items: center;
   justify-content: space-between;

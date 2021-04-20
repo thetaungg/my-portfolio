@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import * as styles from "./NavBar.styles";
-import ManSvg from "../../assets/images/man.svg";
+import ManSvg from "../../assets/icons/man.svg";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const NavBar = ({ siteTitle = "" }: HeaderProps) => {

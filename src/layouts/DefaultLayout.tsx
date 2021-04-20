@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import NavBar from "../components/NavBar/NavBar.component";
 import "../assets/css/global.css";
 import SEO from "../components/seo";
+import Footer from "../components/Footer/Footer.component";
 
 const DefaultLayout = ({ title = "Hi, I'm Thet Aung", children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -20,20 +21,11 @@ const DefaultLayout = ({ title = "Hi, I'm Thet Aung", children }: LayoutProps) =
       <SEO title={title} />
       <div
         style={{
-          padding: `1.5rem 0`,
-          maxWidth: `160rem`,
-          margin: "0 auto",
+          padding: `1.5rem 0 0`,
         }}>
         <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <main style={{ maxWidth: `var(--max-width)`, margin: `0 auto` }}>{children}</main>
+        <Footer />
       </div>
     </>
   );

@@ -10,6 +10,11 @@ export const container = css`
 
 export const imgContainer = css`
   flex-basis: 45%;
+  padding-right: 5rem;
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const contentsContainer = css`

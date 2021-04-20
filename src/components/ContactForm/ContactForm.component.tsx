@@ -35,6 +35,7 @@ const ContactForm = () => {
     e.preventDefault();
     const data = { name, email, message };
 
+    // production env are included in build files so we don't have to create env keys in deployment environments
     fetch(process.env.GATSBY_WEBHOOK_URL as string, {
       method: "POST",
       mode: "cors",

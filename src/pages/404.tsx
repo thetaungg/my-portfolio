@@ -1,6 +1,7 @@
 import React from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
 
+
 const NotFoundPage = () => (
   <DefaultLayout title="404: Not found">
     <h1>404: Not Found</h1>
