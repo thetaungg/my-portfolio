@@ -25,8 +25,8 @@ const name = css`
 const icon = css`
   padding: 0.5rem;
   background-color: #fafafa;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: 1px solid #c4c4c4;
 
