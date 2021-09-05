@@ -33,7 +33,7 @@ export const logo = css`
 `;
 
 export const link = css`
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   color: #424242;
 `;
@@ -45,7 +45,7 @@ export const row = css`
 
 export const navItem = css`
   white-space: nowrap;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   cursor: pointer;
 
   &:not(:last-child) {

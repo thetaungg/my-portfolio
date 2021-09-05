@@ -5,11 +5,13 @@ const footer = css`
 `;
 
 const wrapper = css`
-  padding: 3rem 4rem;
+  padding: 5rem 8rem;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   max-width: var(--max-width);
   margin: 0 auto;
+  border-top: 1px solid #e5e5e5;
 `;
 
 const row = css`
@@ -20,19 +22,40 @@ const row = css`
 const name = css`
   font-size: 3rem;
   margin-bottom: 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3rem;
+    height: 0.2rem;
+    background: var(--color-primary);
+  }
+`;
+
+const copyright = css`
+  font-size: 1.5rem;
+`;
+
+const iconsContainer = css`
+  ${row};
+  margin-left: 2rem;
 `;
 
 const icon = css`
-  padding: 0.5rem;
-  background-color: #fafafa;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border: 1px solid #c4c4c4;
+  width: 2.7rem;
+  height: 2.7rem;
+  cursor: pointer;
 
   img {
     width: 100%;
   }
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+  }
 `;
 
-export { footer, wrapper, name, icon, row };
+export { footer, wrapper, name, icon, row, copyright, iconsContainer };

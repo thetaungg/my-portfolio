@@ -3,7 +3,12 @@ import Typist from "react-typist";
 import DeveloperIcon from "../../assets/icons/developer.svg";
 import * as styles from "./Header.styles";
 
-const texts = ["Frontend Engineer.", "MERNStack Developer.", "JAMStack Engineer."];
+const texts = [
+  "Frontend Engineer.",
+  "MERNStack Developer.",
+  "JAMStack Engineer.",
+  "Cyber Genius Founder",
+];
 
 const Header = () => {
   const [index, setIndex] = useState(0);

@@ -1,14 +1,17 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import TextField from "../TextField/TextField.component";
 import * as styles from "./ContactForm.styles";
 import TextArea from "../TextArea/TextArea.component";
-import { success } from "./ContactForm.styles";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [recapToken, setRecapToken] = useState("");
+  const [isOnApiCall, setIsOnApiCall] = useState(false);
   const [isErrored, setIsErrored] = useState<boolean>(false);
+  const [errorText, setErrorText] = useState("");
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   const onChange = (
@@ -31,12 +34,33 @@ const ContactForm = () => {
     }
   };
 
+  const onRecaptchaChange = (value: any) => {
+    setRecapToken(value);
+    if (value && errorText === "Please, confirm that you're not a robot.") {
+      setIsErrored(false);
+      setErrorText("");
+    }
+  };
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const data = { name, email, message };
+    if (!recapToken) {
+      setIsErrored(true);
+      setErrorText("Please, confirm that you're not a robot.");
+      return;
+    }
 
+    const data = {
+      name,
+      email,
+      message,
+      title: "Contacting From My Portfolio",
+      receiver: "thetaung.dev@gmail.com",
+    };
+
+    setIsOnApiCall(true);
     // production env are included in build files so we don't have to create env keys in deployment environments
-    fetch(process.env.GATSBY_WEBHOOK_URL as string, {
+    fetch(process.env.GATSBY_FORM_SUBMIT_ENDPOINT as string, {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(data),
@@ -47,8 +71,13 @@ const ContactForm = () => {
         setEmail("");
         setMessage("");
         setIsSuccess(true);
+        setIsOnApiCall(false);
       })
-      .catch(() => setIsErrored(true));
+      .catch(() => {
+        setIsErrored(true);
+        setErrorText("Something's wrong. Please try again.");
+        setIsOnApiCall(false);
+      });
   };
   return (
     <form css={styles.form} onSubmit={onSubmit}>
@@ -71,31 +100,29 @@ const ContactForm = () => {
         onChange={(e: ChangeEvent<HTMLInputElement>) => onChange("email", e)}
       />
       <TextArea
+        css={styles.textarea}
         id="message"
         label="Message*"
         value={message}
         required
         onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange("message", e)}
       />
-      <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "2.5rem" }}>
-        <button css={styles.button} type="submit">
-          Send
+      <ReCAPTCHA
+        sitekey="6LfjqEgcAAAAAAwRWCoFYYvPf58ER-BNLdAzhUbq"
+        onChange={onRecaptchaChange}
+        onExpired={() => onRecaptchaChange("")}
+      />
+      {isErrored && <span css={styles.error}>{errorText}</span>}
+      <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "2rem" }}>
+        <button css={styles.button} type="submit" disabled={isOnApiCall}>
+          {isOnApiCall ? "Loading . . . " : "Send"}
         </button>
       </div>
-      {isErrored && (
-        <div style={{ marginTop: "2rem" }}>
-          <span css={styles.error}>
-            Oops, looks like your message wasn't able to get through. Let's do it like the old ways!
-            <br /> Please contact my email:{" "}
-            <a href="mailto:thetaungg42@gmail.com">thetaungg42@gmail.com</a>
-          </span>
-        </div>
-      )}
       {isSuccess && (
         <div style={{ marginTop: "2rem" }}>
           <span css={styles.success}>
-            &#127881; Thanks for contacting me. I'll get back to you as soon as I can. Have a nice
-            day. &#128075;
+            &#127881; Thank you for contacting me. I'll get back to you as soon as I can. Have a
+            nice day. &#128075;
           </span>
         </div>
       )}

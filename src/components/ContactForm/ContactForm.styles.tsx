@@ -11,9 +11,15 @@ export const input = css`
   }
 `;
 
+export const textarea = css`
+  margin-bottom: 1rem;
+`;
+
 export const button = css`
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
+  padding: 1.2rem 4rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
   background-color: #2980b9;
   color: #fff;
   border-radius: 0.5rem;
@@ -33,6 +39,7 @@ export const button = css`
 
 export const error = css`
   color: #db1f48;
+  margin-top: 2rem;
 
   a {
     color: #2573a7;
@@ -41,4 +48,5 @@ export const error = css`
 
 export const success = css`
   color: #00b050;
+  font-size: 1.5rem;
 `;
