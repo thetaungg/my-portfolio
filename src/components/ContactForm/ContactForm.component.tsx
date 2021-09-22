@@ -108,7 +108,7 @@ const ContactForm = () => {
         onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange("message", e)}
       />
       <ReCAPTCHA
-        sitekey="6LfjqEgcAAAAAAwRWCoFYYvPf58ER-BNLdAzhUbq"
+        sitekey="6LfTs0gcAAAAAOqoy2A8iuaekYP2qXYFVgp-DVUh"
         onChange={onRecaptchaChange}
         onExpired={() => onRecaptchaChange("")}
       />

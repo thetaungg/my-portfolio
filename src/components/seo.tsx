@@ -11,6 +11,7 @@ function SEO({ description = "", lang = "en", meta = [], title }: SEOProps) {
             title
             description
             author
+            for_thadar
           }
         }
       }
@@ -31,6 +32,10 @@ function SEO({ description = "", lang = "en", meta = [], title }: SEOProps) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `For Thadar`,
+          content: site.siteMetadata?.for_thadar || ``,
         },
         {
           property: `og:title`,

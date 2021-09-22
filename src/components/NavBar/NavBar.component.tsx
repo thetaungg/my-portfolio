@@ -3,8 +3,9 @@ import { Link } from "gatsby";
 import * as styles from "./NavBar.styles";
 import ManSvg from "../../assets/icons/man.svg";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import NavBtn from "../NavBtn/NavBtn.component";
 
-const NavBar = ({ siteTitle = "" }: HeaderProps) => {
+const NavBar = () => {
   const [isFloating, setIsFloating] = useState<boolean>(false);
   useScrollPosition(
     ({ currPos, prevPos }) => {
@@ -37,7 +38,7 @@ const NavBar = ({ siteTitle = "" }: HeaderProps) => {
             style={{
               textDecoration: `none`,
             }}>
-            {siteTitle}
+            Thet Aung
           </Link>
         </div>
 
@@ -52,6 +53,9 @@ const NavBar = ({ siteTitle = "" }: HeaderProps) => {
             Contact me
           </li>
         </ul>
+        <div css={styles.navBtnContainer}>
+          <NavBtn />
+        </div>
       </div>
     </header>
   );

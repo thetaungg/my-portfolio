@@ -23,7 +23,7 @@ const DefaultLayout = ({ title = "Hi, I'm Thet Aung", children }: LayoutProps) =
         style={{
           padding: `1.5rem 0 0`,
         }}>
-        <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <NavBar />
         <main style={{ maxWidth: `var(--max-width)`, margin: `0 auto` }}>{children}</main>
         <Footer />
       </div>

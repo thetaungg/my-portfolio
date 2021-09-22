@@ -35,6 +35,25 @@ html {
   color: inherit;
 }
 
+@media only screen and (min-width: 90.625em) {
+  /* 1450px */
+  html {
+    font-size: 68.75%; /* 11px */
+  }
+}
+@media only screen and (min-width: 100em) {
+  /* 1600px */
+  html {
+    font-size: 75%; /* 12px */
+  }
+}
+@media only screen and (min-width: 109.375em) {
+  /* 1750px */
+  html {
+    font-size: 81.25%; /* 13px */
+  }
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: .6rem;

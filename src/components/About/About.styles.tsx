@@ -6,6 +6,13 @@ export const container = css`
   width: 100%;
   padding: 5rem;
   min-height: calc(100vh - 20rem);
+
+  @media only screen and (max-width: 975px) {
+    flex-direction: column-reverse;
+  }
+  @media only screen and (max-width: 475px) {
+    padding: 5rem 2.5rem;
+  }
 `;
 
 export const imgContainer = css`
@@ -16,16 +23,27 @@ export const imgContainer = css`
   img {
     width: 100%;
   }
+  @media only screen and (max-width: 1175px) {
+    min-width: 45%;
+  }
 `;
 
 export const textContainer = css`
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 975px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 export const sectionHeading = css`
   font-size: 4rem;
   margin-bottom: 3rem;
+
+  @media only screen and (max-width: 975px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const about = css`

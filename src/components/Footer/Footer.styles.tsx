@@ -12,11 +12,20 @@ const wrapper = css`
   max-width: var(--max-width);
   margin: 0 auto;
   border-top: 1px solid #e5e5e5;
+
+  @media only screen and (max-width: 675px) {
+    padding: 5rem 4rem;
+  }
 `;
 
 const row = css`
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 475px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const name = css`
@@ -33,6 +42,10 @@ const name = css`
     height: 0.2rem;
     background: var(--color-primary);
   }
+
+  @media only screen and (max-width: 475px) {
+    font-size: 3.5rem;
+  }
 `;
 
 const copyright = css`
@@ -40,8 +53,15 @@ const copyright = css`
 `;
 
 const iconsContainer = css`
-  ${row};
+  display: flex;
+  align-items: center;
   margin-left: 2rem;
+
+  @media only screen and (max-width: 475px) {
+    margin-left: 0;
+    margin-top: 3rem;
+    align-self: flex-end;
+  }
 `;
 
 const icon = css`
@@ -54,7 +74,12 @@ const icon = css`
   }
 
   &:not(:last-child) {
-    margin-right: 2.5rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: 475px) {
+    width: 3rem;
+    height: 3rem;
   }
 `;
 

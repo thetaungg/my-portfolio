@@ -24,6 +24,10 @@ export const wrapper = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 695px) {
+    padding: 2.5rem 3rem;
+  }
 `;
 
 export const logo = css`
@@ -51,4 +55,9 @@ export const navItem = css`
   &:not(:last-child) {
     margin-right: 3rem;
   }
+  @media only screen and (max-width: 695px) {
+    display: none;
+  }
 `;
+
+export const navBtnContainer = css``;

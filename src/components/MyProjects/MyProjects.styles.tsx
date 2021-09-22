@@ -11,6 +11,10 @@ export const card = css`
   flex-direction: column;
   padding: 5rem;
   border-radius: 0.8rem;
+
+  @media only screen and (max-width: 475px) {
+    padding: 5rem 2.5rem;
+  }
 `;
 
 export const sectionHeading = css`
@@ -23,4 +27,11 @@ export const projectContainer = css`
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 2rem;
   grid-column-gap: 2rem;
+
+  @media only screen and (max-width: 975px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (max-width: 765px) {
+    grid-template-columns: 1fr;
+  }
 `;
