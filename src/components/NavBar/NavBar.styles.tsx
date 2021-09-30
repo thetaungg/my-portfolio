@@ -23,10 +23,10 @@ export const wrapper = css`
   max-width: var(--max-width);
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   @media only screen and (max-width: 695px) {
     padding: 2.5rem 3rem;
+    justify-content: space-between;
   }
 `;
 

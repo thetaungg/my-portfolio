@@ -30,29 +30,37 @@ const NavBar = () => {
   return (
     <header css={styles.navbar(isFloating)}>
       <div css={styles.wrapper}>
-        <div css={styles.row}>
-          <img css={styles.logo} src={ManSvg} alt="Thet Aung" />
-          <Link
-            to="/"
-            css={styles.link}
-            style={{
-              textDecoration: `none`,
-            }}>
-            Thet Aung
-          </Link>
-        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexGrow: 1,
+          }}>
+          <div css={styles.row}>
+            <img css={styles.logo} src={ManSvg} alt="Thet Aung" />
+            <Link
+              to="/"
+              css={styles.link}
+              style={{
+                textDecoration: `none`,
+              }}>
+              Thet Aung
+            </Link>
+          </div>
 
-        <ul css={styles.row}>
-          <li css={styles.navItem} onClick={() => onNavClick("about")}>
-            About
-          </li>
-          <li css={styles.navItem} onClick={() => onNavClick("projects")}>
-            Projects
-          </li>
-          <li css={styles.navItem} onClick={() => onNavClick("contact")}>
-            Contact me
-          </li>
-        </ul>
+          <ul css={styles.row}>
+            <li css={styles.navItem} onClick={() => onNavClick("about")}>
+              About
+            </li>
+            <li css={styles.navItem} onClick={() => onNavClick("projects")}>
+              Projects
+            </li>
+            <li css={styles.navItem} onClick={() => onNavClick("contact")}>
+              Contact me
+            </li>
+          </ul>
+        </div>
         <div css={styles.navBtnContainer}>
           <NavBtn />
         </div>
