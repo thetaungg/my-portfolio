@@ -70,6 +70,8 @@ const ContactForm = () => {
         setName("");
         setEmail("");
         setMessage("");
+        setIsErrored(false);
+        setErrorText("");
         setIsSuccess(true);
         setIsOnApiCall(false);
       })

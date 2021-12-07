@@ -9,7 +9,6 @@ const NavBar = () => {
   const [isFloating, setIsFloating] = useState<boolean>(false);
   useScrollPosition(
     ({ currPos, prevPos }) => {
-      console.log(Math.abs(currPos.y));
       if (Math.abs(currPos.y) > 80) {
         setIsFloating(true);
       } else {
