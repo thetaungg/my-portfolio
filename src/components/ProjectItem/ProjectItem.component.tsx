@@ -24,7 +24,7 @@ const ProjectItem = ({ url }: { url: string }) => {
       .then(({ name, owner, html_url, stargazers_count, forks, description, language }) => {
         setProjectData({
           name,
-          owner: { login: owner.login },
+          owner: { login: owner?.login },
           html_url,
           stargazers_count,
           forks,
