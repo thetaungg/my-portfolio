@@ -12,9 +12,10 @@ const About = () => (
       <p css={styles.about}>
         I started learning programming when I was 16. I started out as a Java developer. But I
         switched to Web Development in 2019 and started learning Javascript. Six months later, I got
-        a Frontend Developer position in a startup company. I'm still working there as the{" "}
-        <b>Frontend Lead</b>. <br /> I learned everything I know by self-learning , so, don't bother
-        asking me for certificates or degrees. :)
+        a Frontend Developer position in a startup company. About a year later, I got promoted to
+        the <b>Frontend Lead</b> position.
+        <br /> Currently, I'm working as a Remote Frontend Developer in a Singapore-based Ventures
+        Builder company with a team of developers from all over the world.
       </p>
     </div>
   </div>

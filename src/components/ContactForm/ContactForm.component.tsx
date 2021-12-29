@@ -53,7 +53,7 @@ const ContactForm = () => {
     const data = {
       name,
       email,
-      message,
+      desc: message,
       title: "Contacting From My Portfolio",
       receiver: "thetaung.dev@gmail.com",
     };
