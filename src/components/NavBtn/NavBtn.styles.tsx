@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 export const navigation = css`
   display: none;
 
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 695px) {
     display: inline-block;
   }
 `;
