@@ -1,12 +1,12 @@
 import React from "react";
-import ContactMeImage from "../../assets/icons/developer-3.svg";
-import ContactForm from "../ContactForm/ContactForm.component";
+import ContactForm from "@/components/ContactForm/ContactForm.component";
+import ContactMeImage from "@/assets/images/developer-3.inline.svg";
 import * as styles from "./ContactMe.styles";
 
 const ContactMe = () => (
   <div css={styles.container} id="contact">
     <div css={styles.imgContainer}>
-      <img src={ContactMeImage} alt="People talking" />
+      <ContactMeImage />
     </div>
     <div css={styles.contentsContainer}>
       <h5 css={styles.heading}>Let's get in touch</h5>

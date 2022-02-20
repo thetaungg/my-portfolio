@@ -1,8 +1,8 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import TextField from "../TextField/TextField.component";
+import TextField from "@/components/TextField/TextField.component";
+import TextArea from "@/components/TextArea/TextArea.component";
 import * as styles from "./ContactForm.styles";
-import TextArea from "../TextArea/TextArea.component";
 
 const ContactForm = () => {
   const [name, setName] = useState("");

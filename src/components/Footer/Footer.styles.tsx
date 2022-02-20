@@ -1,17 +1,17 @@
 import { css } from "@emotion/react";
 
 const footer = css`
-  background-color: #fafafa;
+  background-color: #f4f4f4;
+  position: relative;
 `;
 
 const wrapper = css`
-  padding: 5rem 8rem;
+  padding: 0 15rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   max-width: var(--max-width);
-  margin: 0 auto;
-  border-top: 1px solid #e5e5e5;
+  margin: 20rem auto 0;
 
   @media only screen and (max-width: 675px) {
     padding: 5rem 4rem;
@@ -83,4 +83,17 @@ const icon = css`
   }
 `;
 
-export { footer, wrapper, name, icon, row, copyright, iconsContainer };
+const wave = css`
+  position: absolute;
+  top: 0;
+  transform: translateY(calc(-100% + 8px));
+  left: 0;
+  right: 0;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export { footer, wrapper, name, icon, row, copyright, iconsContainer, wave };

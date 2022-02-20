@@ -1,11 +1,11 @@
 import React from "react";
+import AboutImage from "@/assets/images/developer-2.inline.svg";
 import * as styles from "./About.styles";
-import AboutImage from "../../assets/icons/developer-2.svg";
 
 const About = () => (
   <div css={styles.container} id="about">
     <div css={styles.imgContainer}>
-      <img src={AboutImage} alt="Developer contemplating" />
+      <AboutImage />
     </div>
     <div css={styles.textContainer}>
       <h5 css={styles.sectionHeading}>About me</h5>

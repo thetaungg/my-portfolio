@@ -1,9 +1,10 @@
 import React from "react";
+import GithubIcon from "@/assets/icons/github.inline.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.inline.svg";
+import StackoverflowIcon from "@/assets/icons/stackoverflow.inline.svg";
+import EmailIcon from "@/assets/icons/gmail.inline.svg";
+import Wave from "@/assets/images/footer-wave.inline.svg";
 import * as styles from "./Footer.styles";
-import GithubIcon from "../../assets/icons/github.inline.svg";
-import LinkedInIcon from "../../assets/icons/linkedin.inline.svg";
-import StackoverflowIcon from "../../assets/icons/stackoverflow.inline.svg";
-import EmailIcon from "../../assets/icons/gmail.inline.svg";
 
 const Footer = () => {
   return (
@@ -34,6 +35,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div css={styles.wave}>
+        <Wave />
       </div>
     </footer>
   );

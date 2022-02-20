@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import GithubIcon from "../../assets/icons/github.inline.svg";
-import LinkedInIcon from "../../assets/icons/linkedin-square.inline.svg";
-import StackoverflowIcon from "../../assets/icons/stackoverflow2.inline.svg";
-import EmailIcon from "../../assets/icons/mail.inline.svg";
+import GithubIcon from "@/assets/icons/github.inline.svg";
+import LinkedInIcon from "@/assets/icons/linkedin-square.inline.svg";
+import StackoverflowIcon from "@/assets/icons/stackoverflow2.inline.svg";
+import EmailIcon from "@/assets/icons/mail.inline.svg";
 import * as styles from "./NavBtn.styles";
 
 const NavBtn = () => {

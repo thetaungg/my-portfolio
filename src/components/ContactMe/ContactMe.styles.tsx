@@ -22,8 +22,9 @@ export const imgContainer = css`
   flex-basis: 45%;
   padding-right: 5rem;
 
-  img {
+  svg {
     width: 100%;
+    height: auto;
   }
 
   @media only screen and (max-width: 895px) {

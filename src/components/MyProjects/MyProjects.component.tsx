@@ -1,6 +1,8 @@
 import React from "react";
+import ProjectItem from "@/components/ProjectItem/ProjectItem.component";
+import TopWave from "@/assets/images/top-wave.inline.svg";
+import BottomWave from "@/assets/images/bottom-wave.inline.svg";
 import * as styles from "./MyProjects.styles";
-import ProjectItem from "../ProjectItem/ProjectItem.component";
 
 const MyProjects = () => {
   return (
@@ -8,16 +10,28 @@ const MyProjects = () => {
       <div css={styles.card}>
         <h5 css={styles.sectionHeading}>My Projects</h5>
         <div css={styles.projectContainer}>
-          <ProjectItem url="https://api.github.com/repos/thetaungg/my-portfolio" />
-          <ProjectItem url="https://api.github.com/repos/thetaungg/company-portfolio" />
-          <ProjectItem url="https://api.github.com/repos/thetaungg/nextjs-starter" />
-          <ProjectItem url="https://api.github.com/repos/thetaungg/nodejs-starter" />
-          <ProjectItem url="https://api.github.com/repos/thetaungg/crown-clothings" />
-          <ProjectItem url="https://api.github.com/repos/thetaungg/natours" />
+          {myProjects.map((url, index) => (
+            <ProjectItem key={index} url={url} />
+          ))}
         </div>
+      </div>
+      <div css={styles.topWave}>
+        <TopWave />
+      </div>
+      <div css={styles.bottomWave}>
+        <BottomWave />
       </div>
     </div>
   );
 };
+
+const myProjects = [
+  `https://api.github.com/repos/thetaungg/my-portfolio`,
+  `https://api.github.com/repos/thetaungg/company-portfolio`,
+  `https://api.github.com/repos/thetaungg/rick-and-morty-wiki`,
+  `https://api.github.com/repos/thetaungg/nextjs-starter`,
+  `https://api.github.com/repos/thetaungg/my-gatsby-starter`,
+  `https://api.github.com/repos/thetaungg/natours`,
+];
 
 export default MyProjects;

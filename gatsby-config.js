@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/assets/images/favicon-16x16.png`, // This path is relative to the root of the site.
+        icon: `src/assets/favicon-16x16.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -46,6 +46,14 @@ module.exports = {
         rule: {
           include: /\.inline\.svg$/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "thetaung",
+        protocol: "https",
+        hostname: "thetaung.com",
       },
     },
   ],

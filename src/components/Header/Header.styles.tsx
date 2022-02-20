@@ -53,8 +53,9 @@ export const imgContainer = css`
   display: flex;
   align-items: center;
 
-  img {
+  svg {
     width: 100%;
+    height: auto;
   }
 
   @media only screen and (max-width: 1075px) {
@@ -126,4 +127,16 @@ export const wave = css`
   img {
     width: 100%;
   }
+`;
+
+export const button = css`
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
+  width: fit-content;
+  margin-top: 2rem;
+  cursor: pointer;
 `;

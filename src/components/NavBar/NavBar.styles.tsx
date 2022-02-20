@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
-export const navbar = (isFloating: boolean) => css`
-  position: fixed;
+export const navbar = (isFloating: boolean, isHidden: boolean) => css`
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -9,11 +9,17 @@ export const navbar = (isFloating: boolean) => css`
   background-color: #fff;
   transition: all 0.4s;
 
+  ${isHidden &&
+  `
+    transform: translateY(-20rem);
+  `}
+
   ${isFloating &&
   `
-   background-color: #fff;
-   box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .1);
-
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .1);
+    transform: translateY(0);
   `}
 `;
 
@@ -30,6 +36,13 @@ export const wrapper = css`
   }
 `;
 
+export const desktopNav = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+`;
+
 export const logo = css`
   width: 4.5rem;
   height: 4.5rem;
@@ -40,6 +53,7 @@ export const link = css`
   font-size: 2.2rem;
   font-weight: 500;
   color: #424242;
+  text-decoration: none;
 `;
 
 export const row = css`

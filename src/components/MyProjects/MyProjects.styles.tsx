@@ -2,9 +2,10 @@ import { css } from "@emotion/react";
 
 export const container = css`
   width: 100%;
-  padding: 5rem 0 4rem;
-  min-height: calc(100vh - 20rem);
-  background-color: #fafafa;
+  background-color: #f2f2f2;
+  position: relative;
+  margin-top: 25rem;
+  margin-bottom: 20rem;
 `;
 export const card = css`
   display: flex;
@@ -33,5 +34,31 @@ export const projectContainer = css`
   }
   @media only screen and (max-width: 765px) {
     grid-template-columns: 1fr;
+  }
+`;
+
+export const topWave = css`
+  position: absolute;
+  top: 0;
+  transform: translateY(calc(-100% + 5px));
+  left: 0;
+  right: 0;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const bottomWave = css`
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% - 5px));
+  left: 0;
+  right: 0;
+
+  svg {
+    width: 100%;
+    height: auto;
   }
 `;

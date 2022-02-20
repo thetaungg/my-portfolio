@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as styles from "./ProjectItem.styles";
-import StarIcon from "../../assets/icons/star.svg";
-import ForkIcon from "../../assets/icons/fork.svg";
+import StarIcon from "@/assets/icons/star.svg";
+import ForkIcon from "@/assets/icons/fork.svg";
 
 interface ProjectData {
   name: string;

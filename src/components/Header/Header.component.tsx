@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Typist from "react-typist";
-import DeveloperIcon from "../../assets/icons/developer.svg";
+import DeveloperIcon from "@/assets/images/developer.inline.svg";
 import * as styles from "./Header.styles";
 
 const texts = ["Frontend Engineer.", "MERNStack Developer.", "JAMStack Engineer."];
@@ -32,7 +32,7 @@ const Header = () => {
         </Typist>
       </div>
       <div css={styles.imgContainer}>
-        <img src={DeveloperIcon} alt="Developer" />
+        <DeveloperIcon />
       </div>
     </div>
   );
