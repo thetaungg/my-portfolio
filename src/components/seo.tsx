@@ -30,6 +30,10 @@ function SEO({ description = "", lang = "en", meta = [], title }: SEOProps) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={[
         {
+          name: `viewport`,
+          content: `width=device-width, minimum-scale=1`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -51,7 +55,7 @@ function SEO({ description = "", lang = "en", meta = [], title }: SEOProps) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: metaDescription,
         },
         {
           name: `twitter:creator`,
