@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import NavBtn from "@/components/NavBtn/NavBtn.component";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
-import ManSvg from "@/assets/icons/man.svg";
+import ManSvg from "@/assets/icons/me.png";
 import * as styles from "./NavBar.styles";
 
 const NavBar = () => {

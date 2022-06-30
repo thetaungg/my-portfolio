@@ -44,9 +44,9 @@ export const desktopNav = css`
 `;
 
 export const logo = css`
-  width: 4.5rem;
-  height: 4.5rem;
-  margin-right: 2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-right: 1rem;
 `;
 
 export const link = css`
