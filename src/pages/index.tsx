@@ -6,14 +6,14 @@ import MyProjects from "@/components/MyProjects/MyProjects.component";
 import ContactMe from "@/components/ContactMe/ContactMe.component";
 
 const IndexPage = () => (
-  <DefaultLayout>
-    <>
-      <Header />
-      <About />
-      <MyProjects />
-      <ContactMe />
-    </>
-  </DefaultLayout>
+    <DefaultLayout>
+        <>
+            <Header />
+            <About />
+            <MyProjects />
+            <ContactMe />
+        </>
+    </DefaultLayout>
 );
 
 export default IndexPage;
